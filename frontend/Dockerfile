@@ -1,10 +1,8 @@
 FROM node:14.17.5-alpine
 
-RUN apk add --no-cache su-exec
-
 ENV HOME=/home/node
 
-USER node
+USER root
 
 RUN mkdir -p $HOME/app
 WORKDIR $HOME/app
