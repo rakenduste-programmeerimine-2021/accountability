@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { Layout, Menu } from 'antd';
-import Login from './pages/login'
 const { Header, Content, Footer } = Layout;
 const centerStyle = {
   position: 'relative',
