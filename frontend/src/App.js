@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Layout, Menu } from 'antd';
+import Webcam from "react-webcam";
+
 const { Header, Content, Footer } = Layout;
 const centerStyle = {
   position: 'relative',
@@ -25,8 +27,11 @@ const App = () => (
     </Header>
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 570 }}>
-        Test your webcam! 
+        Test your Webcam!
+        <Webcam />
       </div>
+    
+        
     </Content>
     <Footer style={{ textAlign: 'center' }}>Rakenduste programmeerimine Accountability 2021</Footer>
   </Layout>
