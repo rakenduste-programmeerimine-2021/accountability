@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import WebcamSample from './components/webcam';
 import { Layout, Menu } from 'antd';
 import Webcam from "react-webcam";
 
@@ -28,7 +29,7 @@ const App = () => (
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 570 }}>
         Test your Webcam!
-        <Webcam />
+        <WebcamSample />
       </div>
     
         
