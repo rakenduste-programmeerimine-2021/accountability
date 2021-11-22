@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import WebcamSample from './components/webcam';
 import { Layout, Menu } from 'antd';
-import Webcam from "react-webcam";
 
 const { Header, Content, Footer } = Layout;
 const centerStyle = {
