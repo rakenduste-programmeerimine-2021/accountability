@@ -9,6 +9,8 @@ WORKDIR $HOME/app
 
 COPY . $HOME/app
 
+RUN npm install react-webcam
+
 RUN npm install && \
     npm cache clean --force
 
