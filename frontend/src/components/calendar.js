@@ -7,7 +7,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "./App.css";
+import "./calendar.css";
 
 const locales = {
     // Meie asukoha aeg
@@ -45,7 +45,7 @@ let formats = {
     timeGutterFormat: 'HH:mm',
   }
 
-function App() {
+function CalendarSample() {
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
 
@@ -54,7 +54,7 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className="Calendar">
             <h1>Calendar</h1>
             <h2>Add New Event</h2>
 
@@ -84,4 +84,4 @@ function App() {
     );
 }
 
-export default App;
+export default CalendarSample;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import WebcamSample from './components/webcam';
+import CalendarSample from './components/calendar';
 import { Layout, Menu } from 'antd';
 
 const { Header, Content, Footer } = Layout;
@@ -22,6 +23,8 @@ const App = () => (
         <Menu.Item key="3">Call history</Menu.Item>
         <Menu.Item key="4">Notifications</Menu.Item>
         <Menu.Item key="5">My account</Menu.Item>
+        {/* <Menu.Item key="6" as={CalendarSample} to='/calendar'>Calendar</Menu.Item> */}
+        
         < div className="items" />
       </Menu>
     </Header>
