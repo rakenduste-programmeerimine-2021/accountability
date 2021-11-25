@@ -14,15 +14,12 @@ const locales = {
     "et": require("date-fns/esm/locale/et"),
 };
 
-// const dateFormat='t';
-
 const localizer = dateFnsLocalizer({
     format,
     parse,
     startOfWeek,
     getDay,
     locales,
-    // dateFormat,
 });
 
 const events = [
@@ -43,6 +40,10 @@ const events = [
         end: new Date(2021, 6, 23),
     },
 ];
+
+let formats = {
+    timeGutterFormat: 'HH:mm',
+  }
 
 function App() {
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
@@ -71,10 +72,7 @@ function App() {
                 defaultView="week"
                 localizer={localizer} 
                 events={allEvents} 
-                // format={{
-                //     timeGutterFormat: (date, culture, localizer) => 
-                //       localizer.format('H'),
-                //  } }
+                formats={formats}
                 startAccessor="start" 
                 endAccessor="end" 
                 style={{ height: 500, margin: "50px" }} 
