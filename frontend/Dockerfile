@@ -8,7 +8,7 @@ RUN mkdir -p $HOME/app
 WORKDIR $HOME/app
 
 COPY . $HOME/app
-# npm install react-router-dom
+
 RUN npm install react-webcam
 
 RUN npm install && \
