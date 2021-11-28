@@ -6,8 +6,6 @@ services:
       context: '../frontend'
     ports: 
       - '3000:3000'
-    volumes: 
-      - '../frontend:/home/node/app:delegated'
     command: 'run start'
     container_name: 'frontend'
 
