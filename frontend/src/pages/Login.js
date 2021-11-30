@@ -4,6 +4,6 @@ function Login() {
        This is a login page
       </div>
     )
-  }
-  
+  } 
+
   export default Login;

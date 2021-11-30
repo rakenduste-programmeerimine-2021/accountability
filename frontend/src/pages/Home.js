@@ -1,5 +1,6 @@
 import WebcamSample from '../components/webcam';
 import { Layout, Menu } from 'antd';
+import { Link } from 'react-router-dom';
 
 
 const { Header, Content, Footer } = Layout;
@@ -19,7 +20,9 @@ const Home = () => (
           <Menu.Item key="2">Book a call</Menu.Item>
           <Menu.Item key="3">Call history</Menu.Item>
           <Menu.Item key="4">Notifications</Menu.Item>
+          <Link to="account">
           <Menu.Item key="5">My account</Menu.Item>
+          </Link>
           < div className="items" />
         </Menu>
       </Header>
