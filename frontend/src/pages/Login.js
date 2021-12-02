@@ -1,4 +1,4 @@
-function Login() {
+ function Login() {
     return (
       <div>
        This is a login page
@@ -6,4 +6,5 @@ function Login() {
     )
   } 
 
-  export default Login;
+  export default Login; 
+

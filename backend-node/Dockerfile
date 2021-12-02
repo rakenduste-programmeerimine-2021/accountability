@@ -2,7 +2,7 @@ FROM node:14.17.5-alpine
 
 ENV HOME=/home/node
 
-USER node
+USER root
 
 RUN mkdir -p $HOME/app
 WORKDIR $HOME/app
