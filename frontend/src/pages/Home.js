@@ -17,8 +17,8 @@ const Home = () => (
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={centerStyle} >
           <Menu.Item key="1">My calls</Menu.Item>
-          <Link to="calender">
-          <Menu.Item key="2">Calender</Menu.Item>
+          <Link to="calendar">
+          <Menu.Item key="2">Calendar</Menu.Item>
           </Link>
           <Menu.Item key="3">Call history</Menu.Item>
           <Menu.Item key="4">Notifications</Menu.Item>
