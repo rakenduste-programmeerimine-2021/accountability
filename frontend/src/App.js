@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Account from "./pages/Account"
 import Calendar from "./pages/Calendar"
+import Video from "./pages/VideoChat"
 
 function App() {
   return (
@@ -14,12 +15,10 @@ function App() {
       <Route path="/login" element={<Login/>} />
       <Route path="/account" element={<Account/>} />
       <Route exact path="/calendar" element={<Calendar/>} />
+      <Route path="/video" element={<Video/>} />
       </Routes>
     </div>
   );
 }
-
-
-
 
 export default App;

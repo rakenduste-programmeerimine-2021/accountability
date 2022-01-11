@@ -1,0 +1,31 @@
+.Calendar {
+	text-align: center;
+	background-color: #966afc;
+	color: black;
+	padding: 40px;
+}
+
+.CalendarBody {
+	background-color: #85a7eb;
+	color: black;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid white;
+  	border-radius: 50px;
+}
+
+.CalendarData {
+	background-color: #487ee9;
+	padding: 20px;
+  	/* background-color: blueviolet; */
+  	margin: 10px;
+	border: 1px solid white;
+  	border-radius: 50px;
+}
+
+.CalendarDataForm {
+	padding: 20px;
+  	margin: 10px;
+	border: 1px solid white;
+  	border-radius: 5px;
+}
