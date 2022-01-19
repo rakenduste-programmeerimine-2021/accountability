@@ -7,6 +7,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import './Calendar.css';
 
 const locales = {
     // Meie asukoha aeg
@@ -57,28 +58,39 @@ function Calendarr() {
             <h1>Calendar</h1>
             <h2>Add New Event</h2>
 
-            <div>
-                <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
-                <DatePicker placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
-                <DatePicker placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
-                <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
-                    Add Event
-                </button>
+            <div className="CalendarData">
+                <div className="CalendarDataForm">
+                    <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} 
+                    value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
+
+                    <DatePicker placeholderText="Start Date" style={{ marginRight: "10px" }} 
+                    selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
+
+                    <DatePicker placeholderText="End Date" selected={newEvent.end} 
+                    onChange={(end) => setNewEvent({ ...newEvent, end })} />
+
+                    <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+                        Add Event
+                    </button>
+                </div>
+
             </div>
-            <Calendar
-                // views={['month', 'week', 'day']}
-                defaultDate={new Date()}
-                defaultView="week"
-                localizer={localizer} 
-                events={allEvents} 
-                formats={formats}
-                startAccessor="start" 
-                endAccessor="end" 
-                style={{ height: 500, margin: "50px" }} 
-                dateFormat={''}
-                // timeslots={1}
-                selectable={true}
-            />
+            <div className="CalendarBody">
+                <Calendar
+                    // views={['month', 'week', 'day']}
+                    defaultDate={new Date()}
+                    defaultView="week"
+                    localizer={localizer} 
+                    events={allEvents} 
+                    formats={formats}
+                    startAccessor="start" 
+                    endAccessor="end" 
+                    style={{ height: 500, margin: "50px" }} 
+                    dateFormat={''}
+                    // timeslots={1}
+                    selectable={true}
+                />
+            </div>
         </div>
     );
 }

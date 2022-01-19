@@ -16,15 +16,25 @@ const Home = () => (
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={centerStyle} >
+          
           <Menu.Item key="1">My calls</Menu.Item>
+
           <Link to="calendar">
-          <Menu.Item key="2">Calendar</Menu.Item>
+            <Menu.Item key="2">Calendar</Menu.Item>
           </Link>
+
           <Menu.Item key="3">Call history</Menu.Item>
+
           <Menu.Item key="4">Notifications</Menu.Item>
+
           <Link to="account">
-          <Menu.Item key="5">My account</Menu.Item>
+            <Menu.Item key="5">My account</Menu.Item>
           </Link>
+
+          <Link to="video">
+            <Menu.Item key="6">Video-calls</Menu.Item>
+          </Link>
+          
           < div className="items" />
         </Menu>
       </Header>
