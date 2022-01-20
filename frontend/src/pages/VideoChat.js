@@ -96,7 +96,7 @@ function VideoChatt() {
 
 	return (
 		<>
-			<h1 style={{ textAlign: "center", color: '#fff' }}>Zoomish</h1>
+			<h1 style={{ textAlign: "center", color: '#fff' }}>Video-chat</h1>
 		<div className="container">
 			<div className="video-container">
 				<div className="video">
@@ -153,6 +153,9 @@ function VideoChatt() {
 					</div>
 				) : null}
 			</div>
+		</div>
+		<div>
+			Siia tuleb tabel
 		</div>
 		</>
 	)
