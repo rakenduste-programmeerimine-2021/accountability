@@ -154,9 +154,6 @@ function VideoChatt() {
 				) : null}
 			</div>
 		</div>
-		<div>
-			Siia tuleb tabel
-		</div>
 		</>
 	)
 }
