@@ -6,6 +6,8 @@ services:
       context: '../frontend'
     ports: 
       - '3000:3000'
+    volumes: 
+      - '../frontend:/home/node/app:delegated'
     command: 'run start'
     container_name: 'frontend'
 
@@ -26,6 +28,7 @@ services:
     ports: 
       - '8081:3000'
       - '9000:9000'
+      - '8080:8080'
     environment: 
       MONGODB_URI: mongodb://root:root@mongo/accountability?authSource=admin
     volumes: 

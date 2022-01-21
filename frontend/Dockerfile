@@ -2,15 +2,15 @@ FROM node:14.17.5-alpine
 
 ENV HOME=/home/node
 
-USER root
+USER node
 
 RUN mkdir -p $HOME/app
 WORKDIR $HOME/app
 
 COPY . $HOME/app
 
-RUN npm install react-webcam
 
+RUN npm install react-webcam
 RUN npm install && \
     npm cache clean --force
 

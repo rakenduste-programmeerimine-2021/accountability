@@ -1,24 +1,29 @@
 {
-  "name": "backend-node",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon --inspect=0.0.0.0:9000 -L src/server.js"
+    "dev": "nodemon --inspect=0.0.0.0:9000 -L src/server.js",
+    "test": "mocha --recursive --exit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mongoose": "^6.0.6",
-    "nodemon": "^2.0.12"
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.13.0",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^9.1.3",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.2",
+    "socket.io": "^4.4.1"
   }
 }

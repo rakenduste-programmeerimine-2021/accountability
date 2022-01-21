@@ -1,4 +1,5 @@
 import format from "date-fns/format";
+import { Image } from 'antd'
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
@@ -7,11 +8,20 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import logo from '../assets/images/logo.png'
+import { Layout, Menu } from 'antd';
 
 const locales = {
     // Meie asukoha aeg
     "et": require("date-fns/esm/locale/et"),
 };
+const { Header, Content, Footer } = Layout;
+const centerStyle = {
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'right'
+
+}
 
 const localizer = dateFnsLocalizer({
     format,
@@ -53,6 +63,13 @@ function Calendarr() {
     }
 
     return (
+        <div className='login-page-main-content'>
+        <Layout>
+         <Header style={{width: '100%', height: 129 }}>
+      <Image className="app-logo" style={{  padding: '0 0px', marginTop: 0 }}  src={logo} preview={false}/>
+      
+    </Header>
+
         <div className="Calendar">
             <h1>Calendar</h1>
             <h2>Add New Event</h2>
@@ -80,6 +97,10 @@ function Calendarr() {
                 selectable={true}
             />
         </div>
+
+        <Footer style={{ textAlign: 'center' }}>Rakenduste programmeerimine Accountability 2021</Footer>
+    </Layout>
+</div>
     );
 }
 
